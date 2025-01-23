@@ -5,11 +5,11 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{ED187FEA-2E28-4EA9-81BA-572933A3427F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Languages.Web", "GeekShooping.Web\Languages.Web.csproj", "{5B0CBA97-51B1-4A2B-85E4-1C1F5C971693}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingLanguages.Web", "CodingLanguages.Web\CodingLanguages.Web.csproj", "{5B0CBA97-51B1-4A2B-85E4-1C1F5C971693}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{908B4253-6807-4A12-BD7B-5AB0B77D53B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Languages.ProductAPI", "GeekShopping.ProductAPI\Languages.ProductAPI.csproj", "{BDC60F5E-704F-4BB1-BD37-F87ED5DD806D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingLanguages.ProductAPI", "CodingLanguages.ProductAPI\CodingLanguages.ProductAPI.csproj", "{BDC60F5E-704F-4BB1-BD37-F87ED5DD806D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
