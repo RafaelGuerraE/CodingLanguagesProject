@@ -1,16 +1,16 @@
 ﻿using AutoMapper;
-using GeekShopping.ProductAPI.Data.ValueObjects;
-using GeekShopping.ProductAPI.Model;
+using CodingLanguages.API.Data.ValueObjects;
+using CodingLanguages.API.Model;
 
-namespace GeekShopping.ProductAPI.Config
+namespace CodingLanguages.API.Config
 {
     public class MappingConfig
     {
         public static MapperConfiguration RegisterMaps() 
         {
             var mappingConfig = new MapperConfiguration(cfg =>{
-                cfg.CreateMap<ProductVO, Product>();
-                cfg.CreateMap<Product, ProductVO>();
+                cfg.CreateMap<LanguageVO, Language>();
+                cfg.CreateMap<Language, LanguageVO>();
             });
 
             return mappingConfig;

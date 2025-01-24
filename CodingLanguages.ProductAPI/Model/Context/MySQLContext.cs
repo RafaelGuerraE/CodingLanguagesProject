@@ -1,12 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CodingLanguages.API.Model;
+using Microsoft.EntityFrameworkCore;
 
-namespace GeekShopping.ProductAPI.Model.Context
+namespace CodingLanguages.API.Model.Context
 {
     public class MySQLContext: DbContext
     {
         public MySQLContext(){ }
         public MySQLContext(DbContextOptions<MySQLContext> options): base(options) { }
-
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Language> Languages { get; set; }
     }
 }

@@ -1,38 +1,27 @@
-﻿using GeekShopping.ProductAPI.Model.Base;
-using System.ComponentModel.DataAnnotations;
+﻿using CodingLanguages.API.Model.Base;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
-namespace GeekShopping.ProductAPI.Model
+namespace CodingLanguages.API.Model
 {
-
-    [Table("product")]
-    public class Product : BaseEntity
+    [Table("language")]
+    public class Language : BaseEntity
     {
         [Column("name")]
         [Required]
         [StringLength(150)]
         public string Name { get; set; }
 
-
-        [Column("price")]
-        [Required]
-        [Range(1, 10000)]
-        public decimal Price { get; set; }
-
-
         [Column("description")]
         [StringLength(500)]
         public string Description { get; set; }
 
-
-        [Column("category_name")]
+        [Column("category")]
         [StringLength(50)]
         public string Category { get; set; }
-
 
         [Column("image_url")]
         [StringLength(300)]
         public string ImageUrl { get; set; }
     }
-    
 }

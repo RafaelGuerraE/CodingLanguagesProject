@@ -1,7 +1,7 @@
 using AutoMapper;
-using GeekShopping.ProductAPI.Config;
-using GeekShopping.ProductAPI.Model.Context;
-using GeekShopping.ProductAPI.Repository;
+using CodingLanguages.API.Repository;
+using CodingLanguages.API.Config;
+using CodingLanguages.API.Model.Context;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new() { Title = "Languages.ProductAPI", Version = "v1" }); 
+    c.SwaggerDoc("v1", new() { Title = "Languages.API", Version = "v1" }); 
 });
 
 var connection = builder.Configuration["MySQLConnection:MySQLConnectionString"];
@@ -22,7 +22,7 @@ IMapper mapper = MappingConfig.RegisterMaps().CreateMapper();
 builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ILanguageRepository, LanguageRepository>();
 
 var app = builder.Build();
 
