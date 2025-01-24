@@ -24,7 +24,7 @@ namespace CodingLanguages.API.Repository
 
         public async Task<LanguageVO> FindLanguageById(long id)
         {
-            Language language = await _context.Languages.Where(p => p.Id == id).FirstOrDefaultAsync();
+            Language language = await _context.Languages.Where(p => p.Id == id).FirstOrDefaultAsync()?? new Language();
             return _mapper.Map<LanguageVO>(language);
         }
 
@@ -48,8 +48,8 @@ namespace CodingLanguages.API.Repository
         {
             try
             {
-                Language language = await _context.Languages.Where(l => l.Id == id).FirstOrDefaultAsync();
-                if (language == null) return false;
+                Language language = await _context.Languages.Where(l => l.Id == id).FirstOrDefaultAsync()?? new Language();
+                if (language.Id <= 0) return false;
                 _context.Languages.Remove(language);
                 await _context.SaveChangesAsync();
                 return true;

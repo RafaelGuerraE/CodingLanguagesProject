@@ -26,7 +26,7 @@ namespace CodingLanguages.API.Controllers
         public async Task<ActionResult<LanguageVO>> FindLanguageById(long id)
         {
             var language = await _repository.FindLanguageById(id);
-            if (language == null) return NotFound();
+            if (language.Id <= 0) return NotFound();
             return Ok(language);
         }
 
