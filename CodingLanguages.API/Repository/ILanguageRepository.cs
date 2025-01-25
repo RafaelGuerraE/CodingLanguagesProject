@@ -8,7 +8,7 @@ namespace CodingLanguages.API.Repository
         Task<LanguageVO> FindLanguageById(long id);
         Task<LanguageVO> CreateLanguage(LanguageVO vo);
         Task<LanguageVO> UpdateLanguage(LanguageVO vo);
-        Task<bool> DeleteLanguage(long id);
+        Task<bool> DeleteLanguageById(long id);
         Task<bool> LanguageExists(long id);
     }
 }

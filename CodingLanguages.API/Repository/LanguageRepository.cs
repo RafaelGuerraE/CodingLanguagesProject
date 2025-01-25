@@ -44,7 +44,7 @@ namespace CodingLanguages.API.Repository
             return _mapper.Map<LanguageVO>(language);
         }
 
-        public async Task<bool> DeleteLanguage(long id)
+        public async Task<bool> DeleteLanguageById(long id)
         {
             try
             {

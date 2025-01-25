@@ -47,7 +47,7 @@ namespace CodingLanguages.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteLanguage(long id)
+        public async Task<ActionResult> DeleteLanguageById(long id)
         {
             var exists = await _repository.LanguageExists(id);
             if (!exists)
@@ -55,7 +55,7 @@ namespace CodingLanguages.API.Controllers
                 return NotFound(new { message = $"Language with ID {id} not found." });
             }
 
-            var status = await _repository.DeleteLanguage(id);
+            var status = await _repository.DeleteLanguageById(id);
             if (!status)
             {
                 return BadRequest(new { message = "Failed to delete the language." });
