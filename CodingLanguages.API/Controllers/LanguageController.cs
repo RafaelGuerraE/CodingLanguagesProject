@@ -31,7 +31,7 @@ namespace CodingLanguages.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<LanguageVO>> CreateLanguage(LanguageVO vo)
+        public async Task<ActionResult<LanguageVO>> CreateLanguage([FromBody] LanguageVO vo)
         {
             if (vo == null) return BadRequest();
             var language = await _repository.CreateLanguage(vo);
@@ -39,7 +39,7 @@ namespace CodingLanguages.API.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult<LanguageVO>> UpdateLanguage(LanguageVO vo)
+        public async Task<ActionResult<LanguageVO>> UpdateLanguage([FromBody] LanguageVO vo)
         {
             if (vo == null) return BadRequest();
             var language = await _repository.UpdateLanguage(vo);
