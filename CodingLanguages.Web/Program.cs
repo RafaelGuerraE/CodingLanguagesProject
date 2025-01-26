@@ -11,6 +11,11 @@ builder.Services.AddHttpClient<ILanguageService, LanguageService>(client =>
     client.BaseAddress = new Uri(builder.Configuration["ServiceUrls:CodingLanguagesApi"]);
 });
 
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();
+
+
 var app = builder.Build();
 
 if (!app.Environment.IsDevelopment())

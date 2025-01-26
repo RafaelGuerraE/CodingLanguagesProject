@@ -19,4 +19,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.1.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Views\Language\LanguageDelete.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
